@@ -48,16 +48,16 @@ void setup()
     int cookie2 = get(stuffs[i].myX + 10,stuffs[i].myY-10);
     int cookie3 = get(stuffs[i].myX - 10,stuffs[i].myY+10);
     if (cookie == cookieColor){
-      //System.out.println("got cookie");
+      stuffs[i].getBig();
       food.disappear();
     } else if (cookie1 == cookieColor){
-      //System.out.println("yay cookie");
+      stuffs[i].getBig();
       food.disappear();
     } else if (cookie2 == cookieColor){
-      //System.out.println("yay cookie");
+      stuffs[i].getBig();
       food.disappear();
     } else if (cookie3 == cookieColor){
-      //System.out.println("yay cookie");
+      stuffs[i].getBig();
       food.disappear();
     } 
   }
@@ -88,7 +88,8 @@ class Cookie {
 
 }
 
-class Poro {     
+class Poro {   
+  int poroSize = 20;  
   int myX;
   int myY;
  	Poro(){
@@ -98,7 +99,7 @@ class Poro {
  	void show(){
  		fill(255);
     noStroke();
-    ellipse(myX,myY,20,20);
+    ellipse(myX,myY,poroSize,poroSize);
     fill(107,73,44);
     triangle(myX+6,myY-9,myX+9,myY-3,myX+10,myY-10);
     triangle(myX-6,myY-9,myX-9,myY-3,myX-10,myY-10);
@@ -108,7 +109,9 @@ class Poro {
     fill(255,99,172);
     arc(myX,myY+5,8,15,0,PI);
   	}
-
+  void getBig(){
+    poroSize = poroSize +10;
+  }
 }
 
 
