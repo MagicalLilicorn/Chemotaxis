@@ -5,7 +5,7 @@ int cookieColor = color(115,57,0);
 void setup()   
  {  
  	size(600,600);
-  stuffs = new Poro[100];
+  stuffs = new Poro[50];
   food = new Cookie(300,300);
   for (int i = 0; i < stuffs.length; i++){
     stuffs[i] = new Poro();
